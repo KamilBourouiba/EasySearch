@@ -176,7 +176,15 @@ function SearchInterface() {
           </button>
           
           {showDorkOptions && (
-            <div className="dork-options-panel">
+            <>
+              <div 
+                className="dork-options-overlay"
+                onClick={() => {
+                  setShowDorkOptions(false)
+                  setShowCustomInput(false)
+                }}
+              />
+              <div className="dork-options-panel">
               <div className="dork-options-grid">
                 {PREDEFINED_DORKS
                   .filter(dork => !selectedDorks.find(sd => sd.id === dork.id))
@@ -235,6 +243,7 @@ function SearchInterface() {
                 )}
               </div>
             </div>
+            </>
           )}
         </div>
         
