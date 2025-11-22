@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import SearchInterface from './components/SearchInterface'
 import './App.css'
 
